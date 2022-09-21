@@ -9,6 +9,8 @@ export class Formulario1Component implements OnInit {
 
   constructor() { }
 
+  dataNascimento:Date = new Date(1972,1,1);
+
   ngOnInit(): void {
   }
 

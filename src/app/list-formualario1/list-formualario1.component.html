@@ -1,3 +1,7 @@
+<div class="d-flex justify-content-end mb-2">
+        <button pButton class="p-button-text p-button-rounded p-button-plain p-button-lg p-button" icon="pi pi-search" title="Filtrar"></button>
+        <button pButton class="p-button-text p-button-rounded p-button-plain p-button-lg p-button" icon="pi pi-plus" title="Novo" routerLink="/form1"></button>
+</div>
 <p-table [value]="pessoas" [lazy]="true" (onLazyLoad)="loadCustomers($event)" responsiveLayout="scroll" dataKey="codigo" selectionMode="single"
     [selection]="pessoaSelecionada" (selectionChange)="onSelectionChange($event)" [selectAll]="selectAll" (selectAllChange)="onSelectAllChange($event)"
     [paginator]="true" [rows]="10" [totalRecords]="totalRecords" [loading]="loading">
@@ -6,7 +10,7 @@
             <th style="width: 3rem"></th>
             <th>Código</th>
             <th>Nome</th>
-            <th>Naturalidade<p-sortIcon field="company"></p-sortIcon></th>
+            <th>Naturalidade</th>
             <th>Data de Nascimento</th>
             <th>Site</th>
             <th>Email</th>
@@ -20,7 +24,7 @@
             <td>{{pessoa.codigo}}</td>
             <td>{{pessoa.nome}}</td>
             <td>{{pessoa.naturalidade}}</td>
-            <td>{{pessoa.dataNascimento}}</td>
+            <td>{{pessoa.dataNascimento | date:'dd/MM/yyyy'}}</td>
             <td>{{pessoa.site}}</td>
             <td>{{pessoa.email}}</td>
         </tr>

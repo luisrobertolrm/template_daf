@@ -13,17 +13,15 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         this.items = [{
-            label: 'File',
+            label: 'MENU 1',
             items: [
-                {label: 'New', icon: 'pi pi-plus'},
-                {label: 'Open', icon: 'pi pi-download'}
+                {label: 'Lista 1'},
             ]
         },
         {
-            label: 'Edit',
+            label: 'MENU 2',
             items: [
-                {label: 'Undo', icon: 'pi pi-refresh'},
-                {label: 'Redo', icon: 'pi pi-repeat'}
+                {label: 'Form 1', routerLink:"lista1"},
             ]
         }];
     }
